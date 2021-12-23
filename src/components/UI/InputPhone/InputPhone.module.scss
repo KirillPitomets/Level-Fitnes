@@ -1,0 +1,75 @@
+@import "../../../styles/variables.scss";
+
+.wrapper {
+  width: 100%;
+}
+
+.inner {
+
+  &_marg {
+    margin-top:.25rem;
+  }
+}
+
+// ======= Input ======
+
+.input {
+  width: 100%;
+
+  font-family: $main-font;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1em;
+  letter-spacing: 0em;
+
+  color: $light-theme-font-color;
+
+  &::placeholder {
+    color: $gray-font-color;
+  }
+
+  padding: .8rem;
+
+  border: 1px solid $border-color;
+
+  // ======= Blocks ======
+  &-wrapper {
+    display: flex;
+  }
+}
+
+// ======= Select ======
+
+.select {
+
+  &__item {
+    padding: 1rem;
+  }
+}
+
+// ======= Label ======
+
+.label {
+  display: inline-block;
+  font-family: $main-font;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: .84em;
+  letter-spacing: 0em;
+
+  color: $light-theme-font-color;
+
+  cursor: pointer;
+  padding: .2rem;
+  margin-left: -.2rem;
+  margin-bottom: .8rem;
+}
+
+// ======= Country flag ======
+
+.country-flag {
+  width: 100%;
+  max-width: 25px;
+}

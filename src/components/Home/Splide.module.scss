@@ -1,0 +1,25 @@
+.arrows {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: absolute;
+  top: calc(50% - 25px);
+  left: 0;
+
+}
+
+.slider {
+  position: relative;
+
+  &__wrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  &__slide {
+    overflow: hidden;
+  }
+}
+

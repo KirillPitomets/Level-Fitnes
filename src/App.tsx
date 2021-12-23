@@ -1,24 +1,98 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+// ======= imgs ======
+import bg from './assets/img/modal/bg-training.jpg';
+// ======= Styles ======
+import './styles/App.scss';
+// ======= Components ======
+import Header from './components/Header/Header'
+import Modal from './components/UI/Modal/Modal';
+import FormTraining from './components/FormTraining/FormTraining';
+import Home from './components/Home/Home';
+import AboutClub from './components/AboutClub/AboutClub'; 
 
-function App() {
+const App = () => {
+  const [trainnigModal, setTrainnigModal] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Modal bg={bg} modal={trainnigModal} setModal={setTrainnigModal}>
+        <FormTraining
+          darkMode={false}
+        />
+      </Modal>
+
+      <Header setTrainingModal={setTrainnigModal} />
+
+      <main>
+        <Home />
+        <AboutClub />
+      </main>
+
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }

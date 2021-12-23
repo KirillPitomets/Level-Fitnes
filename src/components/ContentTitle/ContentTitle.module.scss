@@ -1,0 +1,32 @@
+@import '../../styles/variables.scss';
+
+.title {
+  width: 100%;
+  max-width: 530px;
+
+  font-family: $main-font;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2em;
+  letter-spacing: 0em;
+
+  &_marg {
+    margin-bottom: 1.8rem;
+  }
+}
+
+.short-title {
+  display: block;
+
+  font-size: 0.875rem;
+  font-weight: 900;
+  line-height: 0.8em;
+  letter-spacing: 0.1em;
+
+  color: $main-decor-color;
+
+  &_marg {
+    margin-bottom: 10px;
+  }
+}

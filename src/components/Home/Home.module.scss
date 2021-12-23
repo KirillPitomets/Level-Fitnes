@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+.home {
+  width: 100%;
+  min-height: $home-min-height;
+
+  margin-top: 9rem;
+  background: $home-bg-color;
+
+  position: relative;
+
+  overflow: hidden;
+
+  &__line {
+    width: 150px;
+    position: absolute;
+    top: 0;
+    right: 5%;
+    z-index: 20;
+    &_small {
+      width: 100px;
+      right: 20%;
+    }
+    &_med {
+      width: 350px;
+      right: -7%;
+      top: 40%;
+    }
+    &_big {
+      width: 400px;
+      right: -9%;
+      top: 0;
+    }
+  }
+}
+
+.line {
+  width: 100%;
+} 
+
+.wrapper {
+
+  position: relative;
+
+}

@@ -1,0 +1,70 @@
+@import "../../../styles/variables.scss";
+
+.wrapper {
+  width: 100%;
+}
+
+
+// ======= Input ======
+
+.input {
+  width: 100%;
+
+  font-family: $main-font;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1em;
+  letter-spacing: 0em;
+
+  color: $light-theme-font-color;
+
+  padding: 0.8rem;
+  border: 1px solid $border-color;
+
+  &::placeholder {
+    color: $gray-font-color;
+  }
+
+  // ======= Modifiers ======
+  &_warn {
+    border-color: $warning-color;
+  }
+}
+
+// ======= Label ======
+
+.label {
+  display: inline-block;
+  font-family: $main-font;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.84em;
+  letter-spacing: 0em;
+
+  color: $light-theme-font-color;
+
+  cursor: pointer;
+  padding: 0.2rem;
+  margin-left: -0.2rem;
+  margin-bottom: 0.8rem;
+}
+
+// ======= Warn ======
+
+.warn {
+  font-family: $main-font;
+  font-size: .875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2em;
+  letter-spacing: 0em;
+  color: $warning-color;
+
+  transition: opacity .1s ease;
+    
+  &_hide {
+    opacity: 0;
+  }
+}

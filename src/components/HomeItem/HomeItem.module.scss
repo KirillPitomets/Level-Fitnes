@@ -1,0 +1,53 @@
+@import "../../styles/variables.scss";
+
+.wrapper {
+  width: 100%;
+  min-height: $home-min-height;
+
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+  position: relative;
+}
+
+.wrap-img {
+  width: 100%;
+  max-width: 975px;
+  
+  position: absolute;
+  top: 0;
+  left: -15%;
+  z-index: -1;
+  &__img {
+    max-width: 100%;
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: 603px;
+
+  &__title {
+    font-family: $main-font;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.4em;
+    letter-spacing: 0em;
+    text-align: center;
+    &_span {
+      color: $main-decor-color;
+    }
+  }
+
+  &__text {
+    font-family: $main-font;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6em;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+}

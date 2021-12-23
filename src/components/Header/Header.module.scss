@@ -1,0 +1,172 @@
+@import "../../styles/variables.scss";
+
+// ======= Header ======
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  transition: background .2s ease;
+  
+  // ======= Modifiers ======
+  &_active {
+    background: $header-bg-color;
+  }
+
+  // ======= Elements ======
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.8rem 0 2.2rem 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    
+    &_flex-start {
+      align-items: start;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+// ======= Link ======
+.link {
+  display: flex;
+  align-items: center;
+
+  font-family: $main-font;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2em;
+  letter-spacing: 0em;
+  color: $dark-theme-font-color;
+
+  // ======= Elements ======
+  &__text {
+    margin-left: 0.5rem;
+
+    position: relative;
+
+    &:hover::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+
+      position: absolute;
+      bottom: -0.2rem;
+      left: 0;
+
+      background: $secondary-bg-color;
+
+      opacity: 0;
+      transform: scale(0);
+
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+  }
+}
+
+// ======= Box link ======
+
+.box-link {
+  display: flex;
+  align-items: center;
+  border: 1px solid $border-color;
+
+  padding: 0.4rem 0.875rem;
+
+  background: transparent;
+
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: $border-color;
+  }
+
+  // ======= Modifiers ======
+
+  &_marg {
+    margin: 1rem 0 0 0;
+  }
+
+  // ======= Elements ======
+  &__text {
+    display: block;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.1em;
+    letter-spacing: 0em;
+
+    margin-left: 0.6rem;
+  }
+}
+
+// ======= Phone link ======
+
+.phone-link {
+  display: flex;
+  align-items: center;
+
+  &:hover &__num {
+    color: $main-decor-color;
+  }
+
+  // ======= Modifiers ======
+  &_marg {
+    margin-right: 1.87rem;
+  }
+  // ======= Elments ======
+  &__num {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2em;
+    letter-spacing: 0em;
+    
+    margin-left: .56rem;
+
+    transition: color .2s ease;
+    
+  }
+}
+
+// ======= Svg ======
+.svg {
+  &_mark {
+    width: 24px;
+    height: 24px;
+
+    fill: $dark-theme-svg-color;
+  }
+
+  &_inst {
+    width: 24px;
+    height: 24px;
+
+    fill: $dark-theme-svg-color;
+  }
+
+  &_phone {
+    width: 20px;
+    height: 20px;
+
+    fill: $dark-theme-svg-color;
+  }
+}
