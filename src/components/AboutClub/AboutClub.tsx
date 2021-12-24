@@ -2,20 +2,15 @@ import React from 'react';
 import classNames from 'classnames';
 // ======= Styles ======
 import cl from './AboutClub.module.scss';
+// ======= Data ======
+import contentText from './contentText';
+import titleText from './titleText';
 // ======= Imgs ======
 import bigLogo from '../../assets/img/logo_gray.svg';
 import girl from '../../assets/img/aboutClub/01.jpg';
-import ContentTitle from '../ContentTitle/ContentTitle';
-import ContentText from '../ContentText/ContentText';
-
-const contentText: {text: string}[] = [
-  {
-    text: 'Все групповые программы Level Fitness построенны на профессионализме, неравнодушии и чувстве прекрасного.',
-  },
-  {
-    text: 'Главная особенность — осознанные тренировки, основанные    на глубоких знаниях человеческой биомеханики. Наш подход обеспечит не только красоту тела, но и здоровье.',
-  },
-]
+// ======= Components ======
+import SectionTextContent from '../SectionTextContent/SectionTextContent';
+import ContentPhoto from '../ContentPhoto/ContentPhoto';
 
 const AboutFitness = () => {
 
@@ -30,19 +25,9 @@ const AboutFitness = () => {
 
           <div className={classNames(cl.wrapper, cl.wrapper_pad)}>
 
-            <div className={cl.content}>
+            <SectionTextContent contentText={contentText} titleText={titleText} />
 
-              <ContentTitle
-                shortTitle='о клубе'
-                title='Начни свое преображение с Level Fitness'
-              />
-
-              <ContentText content={contentText} />
-            </div>
-
-            <div className={cl.img}>
-              <img className={cl.img__img} src={girl} alt="Girl exercising" />
-            </div>
+            <ContentPhoto img={girl} alt='girl'/>
 
           </div>
 

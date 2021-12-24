@@ -30,7 +30,7 @@ const FormTraining: React.FC<IFormTrainig> = ({ darkMode }) => {
         inputValue={userName}
         setInputValue={setUserName}
 
-        valid= {validateVariants.valName}
+        valid={validateVariants.valName}
         type="text"
       />
 

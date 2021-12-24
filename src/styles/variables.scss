@@ -6,11 +6,14 @@ $gray: #757575;
 $main-bg-color: $black;
 $secondary-bg-color: $white;
 // ======= Decor color ======
-$main-decor-color: #E7490F;
-$transoarent-orange-color: rgba(231, 73, 15, .7);
+$main-decor-color: #e7490f;
+$transparent-orange-color: rgba(231, 73, 15, 0.7);
 $home-bg-color: #030305;
+$card-line-color: $black;
+// ======= Circles ======
+$color-of-light: rgba(231, 73, 15, 0.4);
 // ======= Header ======
-$header-bg-color: rgba(0,0,0, .9);
+$header-bg-color: rgba(0, 0, 0, 0.9);
 // ======= Borders ======
 $border-color: $gray;
 // ======= Svg ======
@@ -20,17 +23,19 @@ $dark-theme-svg-color: $white;
 $dark-theme-font-color: $white;
 $light-theme-font-color: $black;
 $gray-font-color: $gray;
+$transparent-gray-font-color: rgba(196, 196, 196, .2);
 // ======= Font Family
-$main-font: 'Lato', sans-serif;
-/* Regular, Bold, Black */
-$secondary-color: 'GothamPro', sans-serif;
+$main-font: "Lato", sans-serif;
+/* Regular, Bold,  */
+$secondary-font: "GothamPro", sans-serif;
+/* Black  */
 // ======= Modal ======
-$modal-bg: rgba(0,0,0, .5);
-$transparent-gray-color: rgba(196, 196, 196, .5);
+$modal-bg: rgba(0, 0, 0, 0.5);
+$transparent-gray-color: rgba(196, 196, 196, 0.5);
 // ======= Warning ======
-$warning-color: #EE0000;
+$warning-color: #ee0000;
 // ======= Slide arrow ======
-$slide-arrow-bg-color: rgba(255,255,255, .1);
+$slide-arrow-bg-color: rgba(255, 255, 255, 0.1);
 
 // ========= Sizes  ========
 $home-min-height: 66vh;

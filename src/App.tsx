@@ -8,7 +8,10 @@ import Header from './components/Header/Header'
 import Modal from './components/UI/Modal/Modal';
 import FormTraining from './components/FormTraining/FormTraining';
 import Home from './components/Home/Home';
-import AboutClub from './components/AboutClub/AboutClub'; 
+import AboutClub from './components/AboutClub/AboutClub';
+import OurAdvantages from './components/OurAdvantages/OurAdvantages';
+import OurPrograms from './components/OurPrograms/OurPrograms';
+
 
 const App = () => {
   const [trainnigModal, setTrainnigModal] = useState(false);
@@ -26,6 +29,10 @@ const App = () => {
       <main>
         <Home />
         <AboutClub />
+
+        <OurAdvantages />
+        <OurPrograms />
+
       </main>
 
 

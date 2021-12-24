@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classNames from 'classnames'
 // ======= Styles ======
 import cl from './HomeItem.module.scss'
@@ -8,9 +8,31 @@ import bg from '../../assets/img/home/01.jpg'
 interface IHomeItem {
   title: string,
   text: string,
+  highlightedWord: string,
 }
 
-const HomeItem: React.FC<IHomeItem> = ({title, text}) => {
+const HomeItem: React.FC<IHomeItem> = ({ title, text, highlightedWord }) => {
+
+  let firstPartOfTitle = '';
+  let highlighedWord = '';
+  let lastPartOfTitle = '';
+
+  const findHighlightedWord = (text: string, highlightedWord: string,) => {
+
+    const indxHighlightedWord = text.indexOf(highlightedWord);
+
+    const lastIndxHighlightedWord = indxHighlightedWord + (highlightedWord.length);
+
+    highlighedWord = text.substring(indxHighlightedWord, lastIndxHighlightedWord);
+
+    firstPartOfTitle = text.substring(0, indxHighlightedWord)
+    lastPartOfTitle = text.substring(lastIndxHighlightedWord)
+
+  }
+
+  findHighlightedWord(title, highlightedWord)
+
+
   return (
     <div className={classNames("container", cl.wrapper)} >
 
@@ -21,7 +43,7 @@ const HomeItem: React.FC<IHomeItem> = ({title, text}) => {
       <div className={cl.content}>
 
         <h2 className={cl.content__title}>
-          {title}
+          {firstPartOfTitle} <span className={cl.content__title_span}>{highlighedWord}</span> {lastPartOfTitle}
         </h2>
         <p className={cl.content__text}>
           {text}

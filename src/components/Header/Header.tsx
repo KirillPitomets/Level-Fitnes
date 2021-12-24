@@ -17,19 +17,12 @@ const Header: React.FC<IHeader> = ({ setTrainingModal }) => {
   const [activeHeader, setActiveHeader] = useState(false); 
 
   const changeHeader = () => {
-    
-    console.log( window.scrollY )
     if ( window.scrollY > 120 ) {
       setActiveHeader(true)
     } else {
       setActiveHeader(false)
     }
   }
-
-
-  useEffect(() => { 
-    document.addEventListener('scroll', changeHeader)
-  })
 
   useEffect(() => {
     window.addEventListener('scroll', changeHeader)

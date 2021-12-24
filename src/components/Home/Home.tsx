@@ -65,6 +65,7 @@ const Home = () => {
               >
                 <HomeItem title={item.title}
                   text={item.text}
+                  highlightedWord={item.highlightedWord}
                 />
               </SplideSlide>
             ))

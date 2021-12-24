@@ -1,0 +1,16 @@
+@import "../../styles/variables.scss";
+
+.section {
+  background: $secondary-bg-color;
+
+  padding: 8rem 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  
+  &_marg {
+    margin-top: 54px;
+  }
+}

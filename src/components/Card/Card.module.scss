@@ -1,0 +1,69 @@
+@import "../../styles/variables.scss";
+
+.card {
+  width: 100%;
+  max-width: 350px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: rgba(7, 7, 7, 1);
+
+  padding: 30px 20px;
+
+  &_marg {
+    margin-bottom: 30px;
+  }
+}
+
+// ======= Img ======
+
+.img {
+  width: 100%;
+  padding-top: 58%;
+
+  position: relative;
+  &__img {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+// ======= Title ======
+.title {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1.2em;
+  letter-spacing: 0em;
+
+  &_marg {
+    margin: 20px 0 15px 0;
+  }
+}
+// ======= Des ======
+.des {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 0em;
+
+  color: $gray-font-color;
+}
+// ======= Btn ======
+.btn {
+  font-size: 1rem;
+  line-height: 1.5em;
+
+  &_marg {
+    margin-top: 1.25rem;
+  }
+}

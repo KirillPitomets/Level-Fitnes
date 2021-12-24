@@ -1,0 +1,51 @@
+@import '../../styles/variables.scss';
+// ======= Section ======
+.section {
+  margin-top: 7.5rem;
+  position: relative;
+}
+// ======= Wrapper ======
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+}
+// ======= Inner ======
+.inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &_marg {
+    margin-top: 3.75rem`;
+  }
+}
+// ======= Photo ======
+.photo {
+  margin-top: 6.25rem;
+}
+// ======= bg ======
+.bg {
+  width: 108%;
+  position: absolute;
+  top: -68px;
+  right: -300px;
+
+  -webkit-text-stroke: 1px $main-bg-color;
+
+  color: transparent;
+
+  font-family: $main-font;
+  font-size: 8.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2em;
+  letter-spacing: 0em;
+}
+// ======= Line ======
+.line {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

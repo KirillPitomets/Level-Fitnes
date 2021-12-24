@@ -1,13 +1,13 @@
 import React from 'react';
 import classNames from 'classnames';
 // ======= Styles ======
-import cl from './ContentText.module.scss';
+import cl from './SectionText.module.scss';
 
-interface IContentText {
+interface ISectionText {
   content: { text: string }[],
 }
 
-const ContentText: React.FC<IContentText> = ({ content }) => {
+const SectionText: React.FC<ISectionText> = ({ content }) => {
   return (
     <>
       {
@@ -15,11 +15,11 @@ const ContentText: React.FC<IContentText> = ({ content }) => {
 
           indx > 0
             ?
-            <p className={classNames(cl.text, cl.text_marg)}>
+            <p key={p.text.length + indx} className={classNames(cl.text, cl.text_marg)}>
               {p.text}
             </p>
             :
-            <p className={cl.text}>
+            <p key={p.text.length + indx} className={cl.text}>
               {p.text}
             </p>
 
@@ -29,4 +29,4 @@ const ContentText: React.FC<IContentText> = ({ content }) => {
   );
 };
 
-export default ContentText;
+export default SectionText;
