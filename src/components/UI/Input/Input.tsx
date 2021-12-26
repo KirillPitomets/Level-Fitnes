@@ -1,24 +1,21 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 // ======= Styles ======
 import cl from './Input.module.scss';
 
-export enum validateVariants {
-  valName = 'name'
-}
 
 interface IINput {
   title?: string,
-  darkMode: boolean,
   inputId: string,
   placeholder: string,
   inputValue: any,
   setInputValue: any,
   type: string,
-  valid?: validateVariants,
+  darkMode?: boolean,
 }
 
-const Input: React.FC<IINput> = ({ title, darkMode, inputId, placeholder, inputValue, setInputValue, ...props }) => {
+const Input: React.FC<IINput> = ({ title, inputId, placeholder,
+  inputValue, setInputValue, darkMode, ...props }) => {
 
   const [valid, setValid] = useState<Boolean>(true)
 
@@ -34,10 +31,28 @@ const Input: React.FC<IINput> = ({ title, darkMode, inputId, placeholder, inputV
       <div className={cl.wrapper}>
         <label className={cl.label} htmlFor={inputId}> {title} </label>
       </div>
-      <input className={valid ? cl.input : classNames(cl.input, cl.input_warn)}
+
+      <input className={
+        darkMode
+          ?
+          // ======= Dark mode true ======
+          valid
+            ?
+            classNames(cl.input, cl.input_dark)
+            :
+            classNames(cl.input, cl.input_dark, cl.input_warn)
+          :
+          // ======= Dark mode false ======
+          valid
+            ?
+            cl.input
+            :
+            classNames(cl.input, cl.input_warn)
+      }
         id={inputId}
         placeholder={placeholder}
         {...props}
+        required
         spellCheck='true'
         value={inputValue}
         onChange={(e) => {
@@ -46,7 +61,7 @@ const Input: React.FC<IINput> = ({ title, darkMode, inputId, placeholder, inputV
         }}
       />
 
-      <p className={ valid ? classNames(cl.warn, cl.warn_hide) : cl.warn } >
+      <p className={valid ? classNames(cl.warn, cl.warn_hide) : cl.warn} >
         Введите, пожалуйста, корректное имя
       </p>
     </div>

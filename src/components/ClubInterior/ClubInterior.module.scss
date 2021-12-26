@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.section {
+  background: $secondary-bg-color;
+
+  padding: 120px 0;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;  
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.link {
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 30px;
+
+}

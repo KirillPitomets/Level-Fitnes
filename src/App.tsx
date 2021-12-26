@@ -11,6 +11,10 @@ import Home from './components/Home/Home';
 import AboutClub from './components/AboutClub/AboutClub';
 import OurAdvantages from './components/OurAdvantages/OurAdvantages';
 import OurPrograms from './components/OurPrograms/OurPrograms';
+import Banner from './components/Banner/Banner';
+import OurTrainers from './components/OurTrainers/OurTrainers';
+import SectionForm from './components/SectionForm/SectionForm';
+import ClubInterior from './components/ClubInterior/ClubInterior';
 
 
 const App = () => {
@@ -32,6 +36,13 @@ const App = () => {
 
         <OurAdvantages />
         <OurPrograms />
+        <Banner/>
+        <OurTrainers />
+
+        <SectionForm />
+
+        <ClubInterior />
+
 
       </main>
 

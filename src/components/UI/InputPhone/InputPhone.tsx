@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import classNames from 'classnames';
 // ======= Styles ======
 import cl from './InputPhone.module.scss';
 // ======= Data ======
@@ -10,17 +11,17 @@ import { DropdownItem, DropdownMenu, DropdownActiveItem, DropdownList } from '..
 
 interface IINputNum {
   title?: string,
-  darkMode: boolean,
   inputId: string,
   inputPhone: any,
   setInputPhone: any,
   phoneCode: any,
   setPhoneCode: any,
+  darkMode?: boolean,
 }
 
 const InputNum: React.FC<IINputNum> = ({
-  inputId, title, darkMode, inputPhone, setInputPhone,
-  phoneCode, setPhoneCode }) => {
+  inputId, title, inputPhone, setInputPhone,
+  phoneCode, setPhoneCode, darkMode }) => {
 
   const [openSelect, setOpenSelect] = useState(false);
   const [dialCode, setDialCode] = useState<any | null>('+1');
@@ -38,10 +39,10 @@ const InputNum: React.FC<IINputNum> = ({
   }
 
   const changeMask = (code?: string) => {
-    
+
     const lastNumber = code?.substring(dialCode.length - 1,)
 
-    if ( lastNumber === '0' ) {
+    if (lastNumber === '0') {
       setMask('(99) 999 — 99 — 99')
     } else {
       setMask('(999) 999 — 99 — 99')
@@ -65,7 +66,9 @@ const InputNum: React.FC<IINputNum> = ({
           <DropdownActiveItem onClick={() => setOpenSelect(() => {
             return openSelect ? false : true
           })}>
-            <img className={cl['country-flag']} src={`${window.location.origin}/img/flags/${phoneCode.toLowerCase()}.svg`} alt='ru' />
+            <img className={cl['country-flag']}
+              src={`${window.location.origin}/img/flags/${phoneCode.toLowerCase()}.svg`}
+              alt='ru' />
           </DropdownActiveItem>
 
           <DropdownList open={openSelect} >
@@ -78,7 +81,9 @@ const InputNum: React.FC<IINputNum> = ({
                     setOpenSelect(false);
                   }}
                 >
-                  <img className={cl['country-flag']} src={`${window.location.origin}/img/flags/${phoneCode.code.toLowerCase()}.svg`} alt='ru' />
+                  <img className={cl['country-flag']}
+                    src={`${window.location.origin}/img/flags/${phoneCode.code.toLowerCase()}.svg`}
+                    alt='ru' />
                 </DropdownItem>
               ))
             }
@@ -87,11 +92,18 @@ const InputNum: React.FC<IINputNum> = ({
         </DropdownMenu>
 
         <InputMask
-          className={cl.input}
+          className={
+            darkMode
+              ?
+              classNames(cl.input, cl.input_dark)
+              :
+              cl.input
+          }
           mask={`${dialCode} ${mask}`}
           alwaysShowMask={true}
           value={inputPhone}
           onChange={(e) => setInputPhone(e.target.value)}
+          required
         />
       </div>
 

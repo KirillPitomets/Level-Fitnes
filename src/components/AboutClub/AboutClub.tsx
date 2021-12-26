@@ -10,7 +10,7 @@ import bigLogo from '../../assets/img/logo_gray.svg';
 import girl from '../../assets/img/aboutClub/01.jpg';
 // ======= Components ======
 import SectionTextContent from '../SectionTextContent/SectionTextContent';
-import ContentPhoto from '../ContentPhoto/ContentPhoto';
+import SectionPhoto from '../SectionPhoto/SectionPhoto';
 
 const AboutFitness = () => {
 
@@ -27,7 +27,7 @@ const AboutFitness = () => {
 
             <SectionTextContent contentText={contentText} titleText={titleText} />
 
-            <ContentPhoto img={girl} alt='girl'/>
+            <SectionPhoto img={girl} alt='girl'/>
 
           </div>
 

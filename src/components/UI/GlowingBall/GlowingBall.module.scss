@@ -1,0 +1,12 @@
+@import "../../../styles/variables.scss";
+
+.ball {
+  width: 344px;
+  height: 344px;
+
+  position: absolute;
+
+  border-radius: 50%;
+  background: $color-of-light;
+  filter: blur(230px);
+}

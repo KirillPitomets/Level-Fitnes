@@ -11,8 +11,9 @@ import titleText from './titleText';
 import cards from './Cards';
 // ======= Components ======
 import SectionTextContent from '../SectionTextContent/SectionTextContent';
-import ContentPhoto from '../ContentPhoto/ContentPhoto';
+import SectionPhoto from '../SectionPhoto/SectionPhoto';
 import Card from '../Card/Card';
+import Button, {btnStyleVariant} from '../UI/Button/Button';
 
 const OurPrograms = () => {
 
@@ -30,7 +31,7 @@ const OurPrograms = () => {
           </div>
 
           <SectionTextContent contentText={contentText} titleText={titleText} />
-          <ContentPhoto classNamePhoto={cl.photo} img={girl} alt='girl' />
+          <SectionPhoto classNamePhoto={cl.photo} img={girl} alt='girl' />
         </div>
 
         <div className={classNames(cl.inner, cl.inner_marg)}>
@@ -41,6 +42,11 @@ const OurPrograms = () => {
           }
         </div>
 
+        <Button btnStyle={btnStyleVariant.filled}
+          btnClassNames={classNames(cl.btn, cl.btn_marg)}
+        >
+          Посмотреть все программы
+        </Button>
       </div>
     </div>
   );

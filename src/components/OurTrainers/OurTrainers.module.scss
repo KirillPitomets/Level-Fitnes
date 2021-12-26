@@ -1,14 +1,16 @@
-@import "../../styles/variables.scss";
-// ======= Section ======
+@import '../../styles/variables.scss';
+
+// ======= Section =======
 .section {
-  margin-top: 7.5rem;
-  position: relative;
+
+  &_marg {
+    margin-top: 10rem;
+  }
 }
-// ======= Wrapper ======
+// ======= Wrapper =======
 .wrapper {
   display: flex;
   justify-content: space-between;
-
   position: relative;
 }
 // ======= Inner ======
@@ -21,16 +23,11 @@
     margin-top: 3.75rem;
   }
 }
-// ======= Photo ======
-.photo {
-  margin-top: 6.25rem;
-}
 // ======= bg ======
 .bg {
-  width: 108%;
   position: absolute;
-  top: -68px;
-  right: -300px;
+  top: -80%;
+  right: -10%;
 
   -webkit-text-stroke: 1px $main-bg-color;
 
@@ -42,17 +39,4 @@
   font-weight: 700;
   line-height: 1.2em;
   letter-spacing: 0em;
-}
-// ======= Line ======
-.line {
-  position: absolute;
-  top: 23.5%;
-  left: -2%;
-}
-// ======= Btn ======
-.btn {
-  display: block;
-  &_marg {
-    margin: 5rem auto 0;
-  }
 }

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import cl from './FormTraining.module.scss';
 // ======= Styles ======
 import InputPhone from '../UI/InputPhone/InputPhone';
-import Input, {validateVariants} from '../UI/Input/Input';
+import Input from '../UI/Input/Input';
 import Button, { btnStyleVariant } from '../UI/Button/Button';
 
 
@@ -22,23 +22,22 @@ const FormTraining: React.FC<IFormTrainig> = ({ darkMode }) => {
     <form className={cl.form}>
 
       <Input title='Имя'
-        darkMode={darkMode}
         inputId='userName'
-
+        darkMode={darkMode}
         placeholder='Например Алина'
 
         inputValue={userName}
         setInputValue={setUserName}
 
-        valid={validateVariants.valName}
         type="text"
+        
+        
       />
 
       <InputPhone title='Номер телефона'
 
-        darkMode={darkMode}
         inputId='userPhone'
-
+        darkMode={darkMode}
         inputPhone={userPhone}
         setInputPhone={setUserPhone}
 
@@ -47,7 +46,7 @@ const FormTraining: React.FC<IFormTrainig> = ({ darkMode }) => {
       />
 
       <div className={cl.form__btn}>
-        <Button btnStyle={btnStyleVariant.filled}  >
+        <Button  btnStyle={btnStyleVariant.filled} onClick={(e) => e.preventDefault()} >
           записать на тренировку
         </Button>
       </div>

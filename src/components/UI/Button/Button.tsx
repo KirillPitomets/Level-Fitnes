@@ -10,14 +10,15 @@ export enum btnStyleVariant {
 
 interface IButtonProps {
   children: string,
-  onClick?: () => void,
+  onClick?: (e: any) => void,
   btnStyle: btnStyleVariant,
   width?: string,
   btnClassNames?: any,
+
 }
 
 
-const Button: React.FC<IButtonProps> = ({ children, onClick, width, btnStyle, btnClassNames }) => {
+const Button: React.FC<IButtonProps> = ({ children, onClick, width, btnStyle, btnClassNames, ...props }) => {
 
 
   return (

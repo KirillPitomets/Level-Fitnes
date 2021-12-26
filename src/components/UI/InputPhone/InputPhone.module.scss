@@ -23,16 +23,23 @@
   line-height: 1.1em;
   letter-spacing: 0em;
 
+  background: transparent;
   color: $light-theme-font-color;
+  // color: $gray-font-color;
 
   &::placeholder {
     color: $gray-font-color;
   }
-
+  
   padding: .8rem;
-
+  
   border: 1px solid $border-color;
+  // ======= Modifiers ======
 
+  &_dark {
+    color: $dark-theme-font-color;
+  }
+  
   // ======= Blocks ======
   &-wrapper {
     display: flex;

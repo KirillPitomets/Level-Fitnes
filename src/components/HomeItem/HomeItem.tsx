@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import classNames from 'classnames'
 // ======= Styles ======
 import cl from './HomeItem.module.scss'
