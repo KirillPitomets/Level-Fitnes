@@ -17,6 +17,10 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
+  @media (max-width: $xl ) {
+    justify-content: space-evenly;
+  }
+
   &_marg {
     margin-top: 3.75rem;
   }
@@ -27,21 +31,26 @@
 }
 // ======= bg ======
 .bg {
-  width: 108%;
   position: absolute;
-  top: -68px;
-  right: -300px;
+  top: -5rem;
+  right: 0;
 
-  -webkit-text-stroke: 1px $main-bg-color;
+  overflow: hidden;
 
-  color: transparent;
+  &__text {
+    -webkit-text-stroke: 1px $main-bg-color;
 
-  font-family: $main-font;
-  font-size: 8.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.2em;
-  letter-spacing: 0em;
+    color: transparent;
+
+    font-family: $main-font;
+    font-size: 8.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2em;
+    letter-spacing: 0em;
+
+    margin-right: -20%;
+  }
 }
 // ======= Line ======
 .line {

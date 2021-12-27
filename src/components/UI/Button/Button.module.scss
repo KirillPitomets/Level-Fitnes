@@ -1,17 +1,19 @@
-@import '../../../styles/variables.scss';
+@import "../../../styles/variables.scss";
 
 .btn {
-  padding: .8rem 33px;
+  padding: 0.8rem 33px;
   background: $main-decor-color;
   border: 1px solid $main-decor-color;
 
   color: $dark-theme-font-color;
 
-  transition: background .4s ease, color .4s ease;
-  
-  &:hover {
-    color: $main-decor-color;
-    background: transparent;
+  transition: background 0.4s ease, color 0.4s ease;
+
+  @media (hover) {
+    &:hover {
+      color: $main-decor-color;
+      background: transparent;
+    }
   }
 
   // ======= Modifiers ======
@@ -19,21 +21,22 @@
     background: transparent;
     border: 1px solid $main-decor-color;
     color: $main-decor-color;
-    &:hover {
-      color: $dark-theme-font-color;
-      background: $main-decor-color;
+    @media (hover) {
+      &:hover {
+        color: $dark-theme-font-color;
+        background: $main-decor-color;
+      }
     }
   }
 
   // ======= Elements ======
   &__text {
     font-family: $main-font;
-    font-size: .875rem;
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.07rem;
     letter-spacing: 0em;
     text-transform: uppercase;
   }
-
 }

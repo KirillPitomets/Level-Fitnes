@@ -4,7 +4,6 @@ import cl from './SectionForm.module.scss';
 // ======= Components ======
 import FormTraining from '../FormTraining/FormTraining';
 import GlowingBall from '../UI/GlowingBall/GlowingBall';
-import classNames from 'classnames';
 
 const SectionForm = () => {
   return (

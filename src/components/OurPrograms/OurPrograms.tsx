@@ -13,9 +13,13 @@ import cards from './Cards';
 import SectionTextContent from '../SectionTextContent/SectionTextContent';
 import SectionPhoto from '../SectionPhoto/SectionPhoto';
 import Card from '../Card/Card';
-import Button, {btnStyleVariant} from '../UI/Button/Button';
+import Button, { btnStyleVariant } from '../UI/Button/Button';
 
-const OurPrograms = () => {
+interface IOurPrograms {
+  setModal: any,
+}
+
+const OurPrograms: React.FC<IOurPrograms> = ({ setModal }) => {
 
   return (
     <div className={cl.section}>
@@ -27,7 +31,9 @@ const OurPrograms = () => {
         <div className={cl.wrapper}>
 
           <div className={cl.bg}>
-            Наши программы
+            <p className={cl.bg__text}>
+              Наши программы
+            </p>
           </div>
 
           <SectionTextContent contentText={contentText} titleText={titleText} />
@@ -37,7 +43,7 @@ const OurPrograms = () => {
         <div className={classNames(cl.inner, cl.inner_marg)}>
           {
             cards.map(card => (
-              <Card img={card.img} alt={card.alt} />
+              <Card key={card.id} setModal={setModal} img={card.img} alt={card.alt} />
             ))
           }
         </div>

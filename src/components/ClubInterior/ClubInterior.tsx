@@ -22,7 +22,7 @@ const ClubInterior = () => {
 
           {
             photos.map(photo => (
-              <a className={cl.link} href={photo.href}>
+              <a key={photo.id} className={cl.link} href={photo.href}>
                 <Photo photoClassName={cl.photo} img={photo.img} alt={photo.alt} />
               </a>
             ))

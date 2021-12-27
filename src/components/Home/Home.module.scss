@@ -25,6 +25,10 @@
       width: 350px;
       right: -7%;
       top: 40%;
+
+      @media (max-width: $xxl) {
+        top: 60%;
+      }
     }
     &_big {
       width: 400px;

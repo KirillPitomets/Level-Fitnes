@@ -1,4 +1,4 @@
-@import '../../../styles/variables.scss';
+@import "../../../styles/variables.scss";
 
 .slide-arrow {
   width: 50px;
@@ -14,14 +14,15 @@
   cursor: pointer;
 
   transform: rotate(180deg);
-  transition: opacity .2s ease;
+  transition: opacity 0.2s ease;
 
-  &:hover {
-    opacity: .5;
+  @media (hover) {
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   &_svg {
-
     width: 8px;
     height: 14px;
 

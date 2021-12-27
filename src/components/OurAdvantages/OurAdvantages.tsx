@@ -27,6 +27,7 @@ const OurAdvantages = () => {
           {
             cardText.map((card, indx) => (
               <BigCard
+                key={card.title}
                 title={card.title}
                 des={card.des}
                 img={card.img}

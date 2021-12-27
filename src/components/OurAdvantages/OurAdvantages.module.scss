@@ -10,6 +10,11 @@
   display: flex;
   justify-content: space-between;
   
+  @media (max-width: $xl) {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
   &_marg {
     margin-top: 54px;
   }

@@ -15,14 +15,16 @@ import classNames from 'classnames';
 
 const OurTrainers = () => {
   return (
-    <section className={cl.section_marg}>
+    <section className={classNames(cl.section, cl.section_marg)}>
       <div className="container">
 
         <div className={cl.wrapper}>
 
           <div className={cl.bg}>
-            тренерский <br />
-            состав
+            <p className={cl.bg__text}>
+              тренерский <br />
+              состав
+            </p>
           </div>
 
           <SectionTextContent contentText={contentText} titleText={titleText} />
@@ -35,7 +37,9 @@ const OurTrainers = () => {
         <div className={classNames(cl.inner, cl.inner_marg)}>
           {
             cardsData.map(card => (
-              <PhotoCard title={card.name}
+              <PhotoCard
+                key={card.id}
+                title={card.name}
                 des={card.des}
                 img={card.img}
                 alt={card.alt}

@@ -43,7 +43,11 @@ const HomeItem: React.FC<IHomeItem> = ({ title, text, highlightedWord }) => {
       <div className={cl.content}>
 
         <h2 className={cl.content__title}>
-          {firstPartOfTitle} <span className={cl.content__title_span}>{highlighedWord}</span> {lastPartOfTitle}
+          {firstPartOfTitle}
+          <span className={cl.content__title_span}>
+            {highlighedWord}
+          </span>
+          {lastPartOfTitle}
         </h2>
         <p className={cl.content__text}>
           {text}

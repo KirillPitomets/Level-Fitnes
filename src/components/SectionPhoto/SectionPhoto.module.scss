@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 // ======= Img ======
 .img {
@@ -19,9 +19,13 @@
     background-size: contain;
 
     position: absolute;
-    bottom: -40px;
-    right: -40px;
+    bottom: -13%;
+    right: -9%;
     z-index: -1;
+    
+    @media (max-width: $xl) {
+      right: -5%;
+    }
   }
   // Circle
   &::after {
@@ -38,10 +42,9 @@
     left: -50px;
     z-index: -1;
   }
-  
+
   &_top::after {
     top: -100px;
-    
   }
   &__img {
     width: 100%;

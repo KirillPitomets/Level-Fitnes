@@ -8,9 +8,11 @@ import cl from './Card.module.scss';
 interface ICard {
   img: string,
   alt: string,
+  setModal: Function,
 }
 
-const Card: React.FC<ICard> = ({img, alt}) => {
+const Card: React.FC<ICard> = ({ img, alt, setModal }) => {
+
   return (
     <div className={classNames(cl.card, cl.card_marg)}>
 
@@ -30,6 +32,7 @@ const Card: React.FC<ICard> = ({img, alt}) => {
 
       <Button btnStyle={btnStyleVariant.outLine}
         btnClassNames={classNames(cl.btn, cl.btn_marg)}
+        onClick={() => setModal(true)}
       >
         Записаться
       </Button>

@@ -15,102 +15,41 @@ import Banner from './components/Banner/Banner';
 import OurTrainers from './components/OurTrainers/OurTrainers';
 import SectionForm from './components/SectionForm/SectionForm';
 import ClubInterior from './components/ClubInterior/ClubInterior';
-
+import Contacts from './components/Contacts/Contacts';
+import Footer from './components/Footer/Footer'
 
 const App = () => {
-  const [trainnigModal, setTrainnigModal] = useState(false);
+  const [trainnigModal, setTrainningModal] = useState(false);
 
   return (
     <div>
-      <Modal bg={bg} modal={trainnigModal} setModal={setTrainnigModal}>
+      <Modal bg={bg} modal={trainnigModal} setModal={setTrainningModal}>
         <FormTraining
           darkMode={false}
         />
+        <p className='under-text'>
+          Спортивное счастье уже рядом !
+        </p>
       </Modal>
 
-      <Header setTrainingModal={setTrainnigModal} />
+      <Header setTrainingModal={setTrainningModal} />
 
       <main>
         <Home />
         <AboutClub />
 
         <OurAdvantages />
-        <OurPrograms />
-        <Banner/>
+        <OurPrograms setModal={setTrainningModal} />
+        <Banner />
         <OurTrainers />
-
         <SectionForm />
-
         <ClubInterior />
-
+        <Contacts />
 
       </main>
 
+      <Footer />
 
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </div>
   );
 }

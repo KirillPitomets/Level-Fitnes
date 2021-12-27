@@ -12,7 +12,7 @@
 
 .slider {
   position: relative;
-
+  z-index: 20;
   &__wrapper {
     width: 100%;
     position: relative;

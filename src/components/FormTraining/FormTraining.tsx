@@ -50,11 +50,6 @@ const FormTraining: React.FC<IFormTrainig> = ({ darkMode }) => {
           записать на тренировку
         </Button>
       </div>
-      
-      <p className={cl.form__text}> 
-        Спортивное счастье уже рядом !
-      </p>
-
     </form>
   );
 };

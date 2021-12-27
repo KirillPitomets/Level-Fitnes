@@ -12,13 +12,12 @@ interface IButtonProps {
   children: string,
   onClick?: (e: any) => void,
   btnStyle: btnStyleVariant,
-  width?: string,
   btnClassNames?: any,
 
 }
 
 
-const Button: React.FC<IButtonProps> = ({ children, onClick, width, btnStyle, btnClassNames, ...props }) => {
+const Button: React.FC<IButtonProps> = ({ children, onClick, btnStyle, btnClassNames, ...props }) => {
 
 
   return (
@@ -31,7 +30,7 @@ const Button: React.FC<IButtonProps> = ({ children, onClick, width, btnStyle, bt
         classNames(cl.btn, cl.btn_outline, btnClassNames)
       }
       onClick={onClick}
-      style={{width: width,}}
+      
     >
       <span className={cl.btn__text}>
         {children}

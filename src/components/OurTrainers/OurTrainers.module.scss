@@ -1,8 +1,7 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 // ======= Section =======
 .section {
-
   &_marg {
     margin-top: 10rem;
   }
@@ -26,17 +25,23 @@
 // ======= bg ======
 .bg {
   position: absolute;
-  top: -80%;
-  right: -10%;
+  top: -15rem;
+  right: 0;
 
-  -webkit-text-stroke: 1px $main-bg-color;
+  overflow: hidden;
 
-  color: transparent;
+  &__text {
+    -webkit-text-stroke: 1px $main-bg-color;
 
-  font-family: $main-font;
-  font-size: 8.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.2em;
-  letter-spacing: 0em;
+    color: transparent;
+
+    font-family: $main-font;
+    font-size: 8.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2em;
+    letter-spacing: 0em;
+
+    margin-right: -10%;
+  }
 }

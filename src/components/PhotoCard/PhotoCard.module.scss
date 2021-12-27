@@ -12,10 +12,12 @@
 
   border: 1px solid transparent;
 
-  transition: border .5s ease;
+  transition: border 0.5s ease;
 
-  &:hover {
-    border-color: $main-decor-color;
+  @media (hover) {
+    &:hover {
+      border-color: $main-decor-color;
+    }
   }
 
   &_marg {

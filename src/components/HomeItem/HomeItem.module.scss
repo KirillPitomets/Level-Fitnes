@@ -8,6 +8,10 @@
   justify-content: right;
   align-items: center;
 
+  @media (max-width: $xl) {
+    align-items: flex-start;
+  }
+
   position: relative;
 }
 
@@ -27,6 +31,10 @@
 .content {
   width: 100%;
   max-width: 603px;
+
+  @media (max-width: $xl) {
+    margin-top: 10%;
+  }
 
   &__title {
     font-family: $main-font;
