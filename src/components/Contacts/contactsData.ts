@@ -1,15 +1,18 @@
-type contacts = {
+type contactsTypes = {
   id: string,
   name?: string,
-  data: string,
+  data: string | string[],
   href?: string,
 }
 
-const contactsData: contacts[] = [
+const contactsData: contactsTypes[] = [
 
   {
     id: 'date',
-    data: 'Понедельник — Пятница: 07:00–23:00 Суббота — Воскресенье: 09:00–22:00',
+    data: [
+      'Понедельник — Пятница: 07:00–23:00',
+      'Суббота — Воскресенье: 09:00–22:00',
+    ],
   },
   {
     id: 'address',

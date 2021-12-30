@@ -10,17 +10,19 @@ import SvgIcon from '../UI/SvgIcon/SvgIcon';
 
 const Contacts = () => {
   return (
-    <section className={cl.section}>
+    <section className={cl.section} id="contacts">
       <div className="container">
 
         <div className={cl.wrapper}>
 
           <div className={cl.contacts}>
 
+
             {
               contactsData.map(contact => (
                 <div key={contact.id} className={cl.contact}>
 
+                  {/* set svg icon */}
                   <SvgIcon classSvg={cl.svg}
                     svgName={
                       contact.id === 'phoneNumber'
@@ -55,6 +57,8 @@ const Contacts = () => {
                     }
                   />
 
+                  {/* Checking for name */}
+                  
                   {contact.name
                     ?
                     <p className={cl.contact__name}>
@@ -65,6 +69,7 @@ const Contacts = () => {
                   }
 
                   {/* Checking Link or Paragraph */}
+
                   {
                     contact.href
                       ?
@@ -79,7 +84,24 @@ const Contacts = () => {
                       </a>
                       :
                       <p className={cl.contact__text}>
-                        {contact.data}
+                        {
+                          Array.isArray(contact.data)
+                            ?
+                            // Prints lines if any
+                            contact.data.map((line, indx) => (
+                              contact.id === 'date'
+                                ?
+                                <time key={contact.id + indx}>
+                                  {line}
+                                </time>
+                                :
+                                <span key={contact.id + indx} >
+                                  {line}
+                                </span>
+                            ))
+                            :
+                            contact.data
+                        }
                       </p>
                   }
 

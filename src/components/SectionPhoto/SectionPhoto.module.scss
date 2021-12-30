@@ -8,6 +8,11 @@
 
   position: relative;
 
+  @media (max-width: $md) {
+    padding-top: unset;
+    min-height: 300px;
+  }
+
   &::before {
     content: "";
     width: 100%;

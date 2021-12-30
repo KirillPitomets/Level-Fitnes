@@ -1,7 +1,13 @@
+@import '../../styles/variables.scss';
+
 // ======= Content ======
 .content {
   width: 100%;
   max-width: 540px;
   position: relative;
   z-index: 2;
+
+  @media (max-width: $lg) {
+    margin-bottom: 2.5rem;
+  }
 }

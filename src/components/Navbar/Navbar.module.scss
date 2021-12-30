@@ -13,15 +13,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media (max-width: $med) {
+    @media (max-width: $lg) {
       flex-direction: column;
+    }
+    @media (max-height: $extra-small) {
+      flex-direction: row;
     }
   }
 
   &__item {
     margin: 0 10px;
 
-    @media (max-width: $med) {
+    @media (max-width: $lg) {
       margin-top: 1.5rem;
     }
 

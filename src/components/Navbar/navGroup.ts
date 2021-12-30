@@ -2,21 +2,21 @@ export const navList = [
   {
     id: 1,
     text: 'Групповые программы',
-    path: '#',
+    path: '#ourPrograms',
   },
   {
     id: 2,
     text: 'Тренара',
-    path: '#',
+    path: '#trainers',
   },
   {
     id: 3,
     text: 'Интерьер',
-    path: '#',
+    path: '#clubInterior',
   },
   {
     id: 4,
     text: 'Контакты',
-    path: '#',
+    path: '#contacts',
   },
 ]

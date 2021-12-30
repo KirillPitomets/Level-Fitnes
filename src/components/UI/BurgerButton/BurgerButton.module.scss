@@ -1,12 +1,18 @@
 @import "../../../styles/variables.scss";
 
 .btn {
+  display: none;
+
   width: 45px;
   height: 45px;
 
   background: transparent;
 
   padding: 0;
+
+  @media (max-width: $lg) {
+    display: block;
+  }
 
   &_active {
     .line {

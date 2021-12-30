@@ -11,12 +11,21 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+
+  @media (max-width: $lg) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 // ======= Inner ======
 .inner {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media (max-width: $lg) {
+    justify-content: space-evenly;
+  }
 
   &_marg {
     margin-top: 3.75rem;
@@ -29,6 +38,10 @@
   right: 0;
 
   overflow: hidden;
+
+  @media (max-width: $lg) {
+    display: none;
+  }
 
   &__text {
     -webkit-text-stroke: 1px $main-bg-color;

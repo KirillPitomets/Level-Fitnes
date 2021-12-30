@@ -15,7 +15,9 @@ import classNames from 'classnames';
 
 const OurTrainers = () => {
   return (
-    <section className={classNames(cl.section, cl.section_marg)}>
+    <section className={classNames(cl.section, cl.section_marg)}
+      id="trainers"
+    >
       <div className="container">
 
         <div className={cl.wrapper}>

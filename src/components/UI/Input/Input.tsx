@@ -29,7 +29,13 @@ const Input: React.FC<IINput> = ({ title, inputId, placeholder,
   return (
     <div>
       <div className={cl.wrapper}>
-        <label className={cl.label} htmlFor={inputId}> {title} </label>
+        <label className={classNames(
+          darkMode
+            ?
+            classNames(cl.label, cl.label_dark)
+            :
+            cl.label
+        )} htmlFor={inputId}> {title} </label>
       </div>
 
       <input className={

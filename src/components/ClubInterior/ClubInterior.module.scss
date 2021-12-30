@@ -11,12 +11,14 @@
   display: flex;  
   justify-content: space-between;
   flex-wrap: wrap;
-}
 
+  @media (max-width: 1080px) {
+    justify-content: space-evenly;
+  }
+}
 
 .link {
   width: 100%;
   max-width: 350px;
   margin-bottom: 30px;
-
 }

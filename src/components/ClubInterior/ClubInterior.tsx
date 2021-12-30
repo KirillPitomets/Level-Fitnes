@@ -9,7 +9,7 @@ import Photo from '../Photo/Photo';
 
 const ClubInterior = () => {
   return (
-    <section className={cl.section}>
+    <section className={cl.section} id="clubInterior">
       <div className="container">
         <SectionTitle
           title='Интерьер в фитнес-центре'

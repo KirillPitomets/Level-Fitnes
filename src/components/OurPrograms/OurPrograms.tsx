@@ -22,7 +22,7 @@ interface IOurPrograms {
 const OurPrograms: React.FC<IOurPrograms> = ({ setModal }) => {
 
   return (
-    <div className={cl.section}>
+    <div className={cl.section} id='ourPrograms'>
 
       <img className={cl.line} src={line} alt="" />
 

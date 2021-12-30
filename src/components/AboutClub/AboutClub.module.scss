@@ -24,6 +24,10 @@
   justify-content: space-between;
   align-items: center;
 
+  @media (max-width: $lg) {
+    flex-direction: column;
+  }
+
   &_pad {
     padding-bottom: 19.4%;
   }

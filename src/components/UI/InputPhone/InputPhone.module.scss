@@ -72,6 +72,10 @@
   padding: .2rem;
   margin-left: -.2rem;
   margin-bottom: .8rem;
+
+  &_dark {
+    color: $dark-theme-font-color;
+  }
 }
 
 // ======= Country flag ======

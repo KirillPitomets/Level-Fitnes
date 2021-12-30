@@ -27,26 +27,39 @@ const InputNum: React.FC<IINputNum> = ({
   const [dialCode, setDialCode] = useState<any | null>('+1');
   const [mask, setMask] = useState<string>('(999) 999 — 99 — 99')
 
-  const findDialCode = () => {
+  const removingPrevDialCode = (): string => {
+    const phoneNumberArray = inputPhone.split(' ');
 
-    countriesPhoneCodes.forEach(phone => {
-      if (phone.code === phoneCode) {
-        setDialCode(phone.dial_code);
-        changeMask(phone.dial_code);
-      }
+    phoneNumberArray[0] = '';
 
-    })
+    return phoneNumberArray.join();
   }
 
-  const changeMask = (code?: string) => {
+  const changeMask = (code: string) => {
 
-    const lastNumber = code?.substring(dialCode.length - 1,)
+    const lastNumberOfCode = code.substring(dialCode.length - 1,)
 
-    if (lastNumber === '0') {
+    if (lastNumberOfCode === '0') {
       setMask('(99) 999 — 99 — 99')
     } else {
       setMask('(999) 999 — 99 — 99')
     }
+
+  }
+
+  const findDialCode = (): void => {
+
+    countriesPhoneCodes.forEach(phone => {
+      if (phone.code === phoneCode) {
+
+        setDialCode(phone.dial_code);
+        changeMask(phone.dial_code);
+
+        return;
+
+      }
+
+    })
   }
 
   useEffect(() => {
@@ -56,16 +69,23 @@ const InputNum: React.FC<IINputNum> = ({
   return (
     <div className={cl.inner_marg}>
       <div className={cl.wrapper}>
-        <label className={cl.label} htmlFor={inputId}> {title} </label>
+        <label className={classNames(
+          darkMode
+            ?
+            classNames(cl.label, cl.label_dark)
+            :
+            cl.label
+        )} htmlFor={inputId}> {title} </label>
       </div>
 
       <div className={cl['input-wrapper']}>
 
         <DropdownMenu>
 
-          <DropdownActiveItem onClick={() => setOpenSelect(() => {
-            return openSelect ? false : true
-          })}>
+          <DropdownActiveItem
+            onClick={() => setOpenSelect( () => {
+              return openSelect ? false : true
+            })}>
             <img className={cl['country-flag']}
               src={`${window.location.origin}/img/flags/${phoneCode.toLowerCase()}.svg`}
               alt='ru' />
@@ -101,8 +121,10 @@ const InputNum: React.FC<IINputNum> = ({
           }
           mask={`${dialCode} ${mask}`}
           alwaysShowMask={true}
-          value={inputPhone}
-          onChange={(e) => setInputPhone(e.target.value)}
+          value={ removingPrevDialCode() }
+          onChange={(e) => {
+            setInputPhone(e.target.value)
+          }}
           required
         />
       </div>

@@ -9,4 +9,6 @@
   border-radius: 50%;
   background: $color-of-light;
   filter: blur(230px);
+
+  pointer-events: none;
 }

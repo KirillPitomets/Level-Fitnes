@@ -4,7 +4,7 @@ import bg from './assets/img/modal/bg-training.jpg';
 // ======= Styles ======
 import './styles/App.scss';
 // ======= Components ======
-import Header from './components/Header/Header'
+import Header from './components/Header/Header';
 import Modal from './components/UI/Modal/Modal';
 import FormTraining from './components/FormTraining/FormTraining';
 import Home from './components/Home/Home';
@@ -16,7 +16,7 @@ import OurTrainers from './components/OurTrainers/OurTrainers';
 import SectionForm from './components/SectionForm/SectionForm';
 import ClubInterior from './components/ClubInterior/ClubInterior';
 import Contacts from './components/Contacts/Contacts';
-import Footer from './components/Footer/Footer'
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   const [trainnigModal, setTrainningModal] = useState(false);

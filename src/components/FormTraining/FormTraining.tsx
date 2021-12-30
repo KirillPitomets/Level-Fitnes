@@ -5,6 +5,7 @@ import cl from './FormTraining.module.scss';
 import InputPhone from '../UI/InputPhone/InputPhone';
 import Input from '../UI/Input/Input';
 import Button, { btnStyleVariant } from '../UI/Button/Button';
+import classNames from 'classnames';
 
 
 interface IFormTrainig {
@@ -19,7 +20,7 @@ const FormTraining: React.FC<IFormTrainig> = ({ darkMode }) => {
   const [selectPhoneCode, setSelectPhoneCode] = useState('US')
 
   return (
-    <form className={cl.form}>
+    <form className={classNames(cl.form, cl.form_marg)}>
 
       <Input title='Имя'
         inputId='userName'
@@ -30,12 +31,9 @@ const FormTraining: React.FC<IFormTrainig> = ({ darkMode }) => {
         setInputValue={setUserName}
 
         type="text"
-        
-        
       />
 
       <InputPhone title='Номер телефона'
-
         inputId='userPhone'
         darkMode={darkMode}
         inputPhone={userPhone}

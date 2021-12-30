@@ -3,6 +3,12 @@
 .form {
   width: 100%;
 
+  // ======= Modifiers ======
+  &_marg {
+    margin-top: 3.5rem;
+  }
+
+  // ======= Elements ======
   &__btn {
     width: 100%;
     display: flex;
